@@ -1,0 +1,280 @@
+@charset "UTF-8";
+/* 顶部导航 */
+.top_nav .row div {
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+}
+
+.top_nav .row div a {
+  color: #808080;
+}
+
+.top_nav .row div .btn-danger {
+  color: #fff;
+}
+
+.top_nav .row div .wjs_code {
+  position: relative;
+}
+
+.top_nav .row div .wjs_code img {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.top_nav .row div .wjs_code:hover img {
+  opacity: 1;
+  z-index: 100;
+}
+
+.top_nav .row div:nth-child(1) {
+  border-left: none;
+}
+
+/* 导航条 */
+#wjs_nav nav {
+  margin-bottom: 0;
+}
+
+#wjs_nav .navbar-brand {
+  font-size: 70px;
+  padding-top: 7px;
+}
+
+#wjs_nav .navbar-brand .wjsfont-logo {
+  color: red;
+}
+
+#wjs_nav a {
+  height: 80px;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 80px;
+}
+
+#wjs_nav a:hover,
+#wjs_nav a:focus {
+  border-bottom: 1px solid red;
+}
+
+/* 轮播图 */
+.wjs_slides img {
+  width: 100%;
+}
+
+/* 支付交易保障 */
+.exchange {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.exchange .row > div {
+  margin-bottom: 20px;
+}
+
+.exchange a {
+  color: #808080;
+}
+
+.exchange a .media-left .wjsfont {
+  font-size: 40px;
+}
+
+.exchange a:hover {
+  color: red;
+}
+
+.wjs_wait {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 30px 0;
+}
+
+.wjs_wait .pull-left a {
+  color: red;
+  border-bottom: 1px dashed red;
+}
+
+.wjs_wait .pull-right a {
+  color: #000;
+}
+
+/* 微投资 */
+.wjs_buy {
+  /* 灰色  默认 .cart_defalut */
+  /* 块级元素-容器 行内元素-行内块元素 页面元素使用    */
+  /* 灰色 进度条 cart_progress */
+}
+
+.wjs_buy .row > div {
+  margin-bottom: 20px;
+}
+
+.wjs_buy .cart_defalut {
+  display: block;
+  padding-right: 80px;
+  background-color: #f7f7f7;
+  position: relative;
+  color: #808080;
+  -webkit-box-shadow: 0 0 9px 5px #ccc;
+          box-shadow: 0 0 9px 5px #ccc;
+}
+
+.wjs_buy .cart_defalut .cart_content {
+  padding: 0 5px;
+  border-right: 1px dashed #000;
+}
+
+.wjs_buy .cart_defalut .cart_content h4 {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.wjs_buy .cart_defalut .cart_content .cart_info {
+  padding-bottom: 5px;
+}
+
+.wjs_buy .cart_defalut .cart_content .cart_info .pull-left,
+.wjs_buy .cart_defalut .cart_content .cart_info .pull-right {
+  width: 50%;
+}
+
+.wjs_buy .cart_defalut .cart_content .cart_info .pull-left > div,
+.wjs_buy .cart_defalut .cart_content .cart_info .pull-right > div {
+  padding: 5px 0;
+}
+
+.wjs_buy .cart_defalut .cart_rate {
+  width: 80px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  padding-top: 55px;
+}
+
+.wjs_buy .cart_defalut .cart_rate::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  -webkit-box-shadow: 0 3px 0 0 #ccc;
+          box-shadow: 0 3px 0 0 #ccc;
+}
+
+.wjs_buy .cart_defalut .cart_rate::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left: -10px;
+  bottom: -10px;
+  -webkit-box-shadow: 0 -3px 0 0 #ccc;
+          box-shadow: 0 -3px 0 0 #ccc;
+}
+
+.wjs_buy .cart_exp {
+  background-color: red;
+  color: #fff;
+}
+
+.wjs_buy .cart_exp .cart_content {
+  border-color: #fff;
+  position: relative;
+}
+
+.wjs_buy .cart_exp .cart_content .wjsfont {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 40px;
+}
+
+.wjs_buy .cart_progress .cart_rate .tips {
+  /* 
+          ul li:nth-child(2)
+            选择到了ul父元素里面的第二个li标签 
+          和nth-of-type区别 
+          ul li:nth-of-type(2)
+            选择到了ul父元素里面第二个li标签
+            在计算索引的时候 忽略其他类型的标签的!!!
+           */
+}
+
+.wjs_buy .cart_progress .cart_rate .tips span:nth-child(1) {
+  border: 1px solid green;
+  color: green;
+}
+
+.wjs_buy .cart_progress .cart_rate .tips span:nth-of-type(2) {
+  border: 1px solid red;
+  color: red;
+}
+
+.wjs_news .all_news {
+  border-bottom: 1px solid #000;
+  font-size: 30px;
+  position: relative;
+}
+
+.wjs_news .all_news::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -5px;
+  right: -10px;
+}
+
+.wjs_news .new_title {
+  position: relative;
+}
+
+.wjs_news .new_title .line {
+  width: 0;
+  border-left: 1px dashed #000;
+  height: 400px;
+  position: absolute;
+  left: 74px;
+  z-index: -1;
+}
+
+.wjs_news .new_title ul {
+  list-style: none;
+}
+
+.wjs_news .new_title ul li {
+  margin-bottom: 55px;
+}
+
+.wjs_news .new_title ul li a {
+  background-color: #cccccc;
+  color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  display: inline-block;
+}
+
+.wjs_news .new_title ul li a .wjsfont {
+  font-size: 50px;
+}
+
+.wjs_news .new_title ul li a:hover, .wjs_news .new_title ul li a:focus {
+  background-color: red;
+}

@@ -1,0 +1,277 @@
+body {}
+
+// 灰色的字体
+$fontcolor:#808080;
+/* 顶部导航 */
+
+.top_nav {
+  .row {
+    div {
+      border-bottom: 1px solid #000;
+      border-left: 1px solid #000;
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+      a {
+        color: $fontcolor;
+      }
+      .btn-danger {
+        color: #fff;
+      }
+      .wjs_code {
+        position: relative;
+        img {
+          position: absolute;
+          left: 0;
+          top: 20px; // display: none;
+          opacity: 0;
+          transition: opacity 1s;
+          // z-index: 100;
+        }
+        &:hover img {
+          // display: block;
+          opacity: 1;
+            z-index: 100;
+        }
+      }
+    }
+    div:nth-child(1) {
+      border-left: none;
+    }
+  }
+}
+
+/* 导航条 */
+
+#wjs_nav {
+  nav {
+    margin-bottom: 0;
+  }
+  .navbar-brand {
+    font-size: 70px;
+    padding-top: 7px;
+    .wjsfont-logo {
+      color: red;
+    }
+  }
+  a {
+    height: 80px;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 80px;
+  }
+  a:hover,
+  a:focus {
+    // :focus 获得焦点 点击 
+    border-bottom: 1px solid red;
+  }
+}
+
+/* 轮播图 */
+
+.wjs_slides {
+  img {
+    width: 100%;
+  }
+}
+
+/* 支付交易保障 */
+
+.exchange {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  .row>div {
+    margin-bottom: 20px;
+  }
+  a {
+    color: $fontcolor;
+    .media-left {
+      .wjsfont {
+        font-size: 40px;
+      }
+    }
+    .media-body {}
+  }
+  a:hover {
+    color: red;
+  }
+}
+
+.wjs_wait {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 30px 0;
+  .pull-left {
+    a {
+      color: red;
+      border-bottom: 1px dashed red;
+    }
+  }
+  .pull-right {
+    a {
+      color: #000;
+    }
+  }
+}
+
+/* 微投资 */
+
+.wjs_buy {
+  .row>div {
+    margin-bottom: 20px;
+  }
+  /* 灰色  默认 .cart_defalut */
+  /* 块级元素-容器 行内元素-行内块元素 页面元素使用    */
+  .cart_defalut {
+    display: block;
+    padding-right: 80px;
+    background-color: #f7f7f7;
+    position: relative;
+    color: $fontcolor; // 边框阴影
+    // 水平偏移 垂直偏移 模糊值 外延值 颜色 ?内外阴影
+    box-shadow: 0 0 9px 5px #ccc;
+    .cart_content {
+      padding: 0 5px;
+      border-right: 1px dashed #000;
+      h4 {
+        text-align: center;
+        padding-top: 20px;
+      }
+      .cart_info {
+        padding-bottom: 5px;
+        .pull-left,
+        .pull-right {
+          width: 50%;
+          >div {
+            padding: 5px 0;
+          }
+        }
+      }
+    }
+    .cart_rate {
+      width: 80px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      text-align: center;
+      padding-top: 55px;
+      &::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #fff;
+        position: absolute;
+        left: -10px;
+        top: -10px;
+        box-shadow: 0 3px 0 0 #ccc;
+      }
+      &::after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #fff;
+        position: absolute;
+        left: -10px;
+        bottom: -10px;
+        box-shadow: 0 -3px 0 0 #ccc;
+      }
+    }
+  } // 红色 体验  cart_exp
+  .cart_exp {
+    background-color: red;
+    color: #fff;
+    .cart_content {
+      border-color: #fff;
+      position: relative;
+      .wjsfont {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 40px;
+      }
+    }
+  }
+  /* 灰色 进度条 cart_progress */
+  .cart_progress {
+    .cart_rate {
+      .tips {
+        // .btn{
+        //   border: none;
+        //   padding: 2px;
+        //   margin: 0;
+        //   outline: none;
+        //   border: 1px solid green;
+        //   color: green;
+        // }
+        /* 
+          ul li:nth-child(2)
+            选择到了ul父元素里面的第二个li标签 
+          和nth-of-type区别 
+          ul li:nth-of-type(2)
+            选择到了ul父元素里面第二个li标签
+            在计算索引的时候 忽略其他类型的标签的!!!
+           */
+        span:nth-child(1) {
+          border: 1px solid green;
+          color: green;
+        }
+        span:nth-of-type(2) {
+          border: 1px solid red;
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+.wjs_news {
+  .all_news {
+    border-bottom: 1px solid #000;
+    font-size: 30px;
+    position: relative;
+    &::before{
+      content: "";
+      width: 10px;
+      height: 10px;
+      border: 1px solid #000;
+      border-radius: 50%;
+      position: absolute;
+      bottom: -5px;
+      right: -10px;
+    }
+  }
+  .new_title {
+    position: relative;
+    .line{
+      width: 0;
+      border-left: 1px dashed #000;
+      height: 400px;
+      position: absolute;
+      left: 74px;
+      z-index: -1;
+    }
+    ul{
+      list-style: none;
+      li{
+        margin-bottom: 55px;
+        a{
+          background-color: #cccccc;
+          color: #fff;
+          border-radius: 50%;
+          padding: 10px;
+          display: inline-block;
+          .wjsfont{
+            font-size: 50px;
+          }
+          &:hover,&:focus{
+            background-color: red;
+          }
+        }
+      }
+    }
+  }
+  .news_content {}
+}
